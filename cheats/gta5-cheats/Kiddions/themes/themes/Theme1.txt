@@ -1,0 +1,13 @@
+{
+  "Name" : "Orgasmania",
+  "FontName" : "Oxanium",
+  "ItemColor" : "000000",
+  "TextColor" : "ffffff",
+  "SelectedItemColor" : "969696",
+  "SelectedTextColor" : "DB3E00",
+  "BackgroundColor" : "DB3E00",
+  "TransparencyColorKey" : "001337",
+  "ItemHeight" : 25,
+  "ItemWidth" : 350,
+  "ItemSpacing" : 1
+}
