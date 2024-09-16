@@ -39,13 +39,7 @@ window.addEventListener("load", function() {
       banner.style.display = 'none';
   }
 
-  // Main function to handle loading banner
-  function handleImageLoading() {
-      // If images are cached, remove banner immediately
-      if (areImagesCached()) {
-          removeLoadingBanner();
-          return;
-      }
+
 
       const images = document.querySelectorAll('.image');
       let imagesLoaded = 0;
