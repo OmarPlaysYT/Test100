@@ -25,21 +25,18 @@ function setImagesAsLoaded() {
 // Main function to handle image loading and loading screen
 function handleLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
-    const mainContent = document.getElementById('main-content');
     const images = document.querySelectorAll('img');
     let imagesLoaded = 0;
 
     // If images are cached (cookie is set), skip the loading screen logic
     if (areImagesCached()) {
-        mainContent.style.display = 'block';  // Show the main content immediately
         loadingScreen.classList.add('hide-loading'); // Let CSS animation handle the transition
         return;
     }
 
-    // Function to show main content after a delay of 3.3 seconds
-    function showContentAfterDelay() {
+    // Function to show the loading screen for a set duration (3.3 seconds)
+    function showLoadingScreen() {
         setTimeout(function() {
-            mainContent.style.display = 'block';  // Show the main content
             loadingScreen.classList.add('hide-loading'); // Trigger CSS animation to move the loading screen away
         }, 3300); // Display loading screen for 3.3 seconds
     }
@@ -53,7 +50,7 @@ function handleLoadingScreen() {
                 imagesLoaded++;
                 if (imagesLoaded === images.length) {
                     setImagesAsLoaded();  // Mark images as loaded in cookies
-                    showContentAfterDelay();  // Show content after the delay
+                    showLoadingScreen();  // Trigger the animation after the delay
                 }
             });
 
@@ -66,7 +63,9 @@ function handleLoadingScreen() {
     // If all images are already loaded at page load
     if (imagesLoaded === images.length) {
         setImagesAsLoaded();
-        showContentAfterDelay();
+        showLoadingScreen();
+    } else {
+        showLoadingScreen();  // Start the countdown even if images are still loading
     }
 }
 
