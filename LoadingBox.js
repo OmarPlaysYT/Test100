@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
     // Function to simulate a delayed banner removal after 5 seconds
     function delayedRemoveBanner() {
         setTimeout(() => {
-            const banner = document.getElementById('loadingBanner');
+            const banner = document.getElementById('loading-screen');
             banner.style.display = 'none';
         }, 3300); // Wait for 5 seconds before hiding the banner
     }
