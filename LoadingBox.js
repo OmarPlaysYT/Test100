@@ -31,7 +31,7 @@ function handleLoadingScreen() {
             // Remove the loading screen after the CSS animation finishes (1 second)
             setTimeout(function() {
                 loadingScreen.style.display = 'none';
-            }, 1000); // Match this with the CSS animation duration (1s)
+            }, 3300); // Match this with the CSS animation duration (1s)
         }, 3300); // Display loading screen for 3.3 seconds
     }
 
