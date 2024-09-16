@@ -33,11 +33,7 @@ window.addEventListener("load", function() {
       localStorage.setItem('imagesLoaded', 'true');
   }
 
-  // Function to remove the loading banner
-  function removeLoadingBanner() {
-      const banner = document.getElementById('loading-screen');
-      banner.style.display = 'none';
-  }
+
 
 
 
@@ -53,7 +49,6 @@ window.addEventListener("load", function() {
                   imagesLoaded++;
                   if (imagesLoaded === images.length) {
                       setImagesAsLoaded();
-                      removeLoadingBanner();
                   }
               });
 
