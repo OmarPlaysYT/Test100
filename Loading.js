@@ -28,7 +28,7 @@ function handleLoadingScreen() {
             mainContent.style.display = 'block';  // Show the main content
             loadingScreen.classList.add('hide-loading'); // Trigger CSS animation to move the loading screen away
             // No forced hiding of loading screen, let the CSS `hide-loading` class animate it away
-        }, 3300); // Display loading screen for 3.3 seconds
+        }, 3800); // Display loading screen for 3.3 seconds
     }
 
     // Check if all images are loaded
