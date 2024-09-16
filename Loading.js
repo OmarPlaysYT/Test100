@@ -32,7 +32,7 @@ function handleLoadingScreen() {
             setTimeout(function() {
                 loadingScreen.style.display = 'none';
             }, 1000); // Match this with the CSS animation duration (1s)
-        }, 3300); // Display loading screen for 3.3 seconds
+        }, 5000); // Display loading screen for 3.3 seconds
     }
 
     // Check when each image is loaded
