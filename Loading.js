@@ -17,17 +17,18 @@ function handleLoadingScreen() {
 
     // If images are cached, skip the loading screen logic
     if (areImagesCached()) {
-        loadingScreen.style.display = 'none'; // Hide the loading screen immediately
         mainContent.style.display = 'block';  // Show the main content immediately
+        loadingScreen.classList.add('hide-loading'); // Let CSS animation handle the transition
         return;
     }
 
-    // Function to show main content and wait for animation (after 3.3 seconds)
+    // Function to show main content after a delay of 3.3 seconds
     function showContentAfterDelay() {
         setTimeout(function() {
             mainContent.style.display = 'block';  // Show the main content
-            // The loading screen will not be hidden here; let your animation handle it
-        }, 3300); // Wait for 3.3 seconds
+            loadingScreen.classList.add('hide-loading'); // Trigger CSS animation to move the loading screen away
+            // No forced hiding of loading screen, let the CSS `hide-loading` class animate it away
+        }, 3300); // Display loading screen for 3.3 seconds
     }
 
     // Check if all images are loaded
