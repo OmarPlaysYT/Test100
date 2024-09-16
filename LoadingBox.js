@@ -8,34 +8,29 @@ function setImagesAsLoaded() {
     localStorage.setItem('imagesLoaded', 'true');
 }
 
-// Main function to handle image loading and the loading screen
+// Main function to handle image loading and loading screen
 function handleLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     const mainContent = document.getElementById('main-content');
     const images = document.querySelectorAll('img');
     let imagesLoaded = 0;
 
-    // If images are already cached, skip the loading screen
+    // If images are cached, skip the loading screen logic
     if (areImagesCached()) {
-        loadingScreen.style.display = 'none'; // Immediately hide the loading screen
-        mainContent.style.display = 'block';  // Show the main content
+        loadingScreen.style.display = 'none'; // Hide the loading screen immediately
+        mainContent.style.display = 'block';  // Show the main content immediately
         return;
     }
 
-    // Function to hide the loading screen after 3.3 seconds
-    function hideLoadingScreen() {
+    // Function to show main content and wait for animation (after 3.3 seconds)
+    function showContentAfterDelay() {
         setTimeout(function() {
-            loadingScreen.classList.add('hide-loading'); // Add class for animation
-            mainContent.style.display = 'block'; // Show the main content
-
-            // Remove the loading screen after the CSS animation finishes (1 second)
-            setTimeout(function() {
-                loadingScreen.style.display = 'none';
-            }, 1000); // Match this with the CSS animation duration (1s)
-        }, 5000); // Display loading screen for 3.3 seconds
+            mainContent.style.display = 'block';  // Show the main content
+            // The loading screen will not be hidden here; let your animation handle it
+        }, 3300); // Wait for 3.3 seconds
     }
 
-    // Check when each image is loaded
+    // Check if all images are loaded
     images.forEach((image) => {
         if (image.complete) {
             imagesLoaded++;
@@ -43,8 +38,8 @@ function handleLoadingScreen() {
             image.addEventListener('load', () => {
                 imagesLoaded++;
                 if (imagesLoaded === images.length) {
-                    setImagesAsLoaded(); // Mark images as loaded
-                    hideLoadingScreen();  // Hide loading screen after 3.3 seconds
+                    setImagesAsLoaded();  // Mark images as loaded
+                    showContentAfterDelay();  // Show content after the delay
                 }
             });
 
@@ -54,10 +49,10 @@ function handleLoadingScreen() {
         }
     });
 
-    // If all images were already loaded at page load, hide the loading screen
+    // If all images are already loaded at page load
     if (imagesLoaded === images.length) {
         setImagesAsLoaded();
-        hideLoadingScreen();
+        showContentAfterDelay();
     }
 }
 
