@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewort" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="OmarPlays,OmarPlays Mod, OmarPlays Menu, OmarPlays Mod Menu, GTA Cheat">
+        <meta name="description" content="Unlock powerful features and dominate with our cutting-edge cheat software, OmarPlays. Easy to install, regularly updated, and designed for elite gamers. Transform your play today!">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="Loading.css">
+        <link rel="icon" type="image/x-icon" href="/images/OP_logo.png">
+        <!--Font Awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>OmarPlays - Home</title>
+    </head>
+    
+    <style>
+
+        @font-face {
+        font-family: Designer;
+        src: url(/fonts/Designer.otf);
+        }
+        @font-face {
+        font-family: American;
+        src: url(/fonts/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf);
+        }
+
+        h1, h2 {
+            font-family: Designer;
+            color: white;
+            font-weight: 100;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+
+        a.your {
+            color: #cf9cff;
+            transition: 0.5s;
+            border-radius: 5px;
+            text-decoration: underline;
+        }
+        a.your:hover {
+            cursor:default;
+            color: #c077ff;
+            transition: 0.5s;
+            background-color: #282329;
+            padding: 10px 13px;
+            border-radius: 20px;
+            cursor:grab;
+            text-decoration: underline #c077ff00;
+        }
+        .OP {
+            width: 30px;
+            cursor: pointer;
+        }
+        .cheats{
+            display: flex;
+            align-self:center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cheat {
+            width: 600px;
+            margin: 20px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+        }
+        .cheat:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            
+        }
+
+/* ------------------------------------- */
+
+/* From Uiverse.io by SouravBandyopadhyay */ 
+.notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+  position: relative;
+  width: 345px;
+  height: 300px;
+  background: #29292c;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  --color: #32a6ff;
+  text-align: center;
+  align-content: center;
+  transition: 0.5s ease;
+}
+.notification img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    left: 50%;
+}
+
+.notification:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  background: #18181b;
+  z-index: 2
+}
+
+.notification:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.notification:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 19px rgba(193, 142, 255, 0.079);
+}
+
+.notification:hover:after {
+  transform: translateX(0.15rem)
+}
+
+.notititle {
+  color: var(--color);
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+  font-weight: bolder;
+}
+
+.notification:hover .notititle {
+  transform: translateX(0.15rem)
+}
+
+.notibody {
+  color: #99999d;
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+/*
+.notification:hover .notibody {
+  transform: translateX(0.25rem)
+}
+  */
+
+.notiglow,
+.notiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle closest-side at center, rgb(180, 118, 255), transparent);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.notiglow {
+  z-index: 3;
+}
+
+.notiborderglow {
+  z-index: 1;
+}
+
+.notification:hover .notiglow {
+  opacity: 0.1
+}
+
+.notification:hover .notiborderglow {
+  opacity: 0.1
+}
+
+.note {
+  color: var(--color);
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+.Box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* This allows the items to wrap to the next line */
+}
+/* ------------------------------------- */
+
+/* From Uiverse.io by gharsh11032000 */ 
+.buttonGame {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 142, 255);
+  border: 2px solid rgb(193, 142, 255);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0 0px 17px rgba(193, 142, 255, 0.332);
+}
+
+.buttonGame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgba(193, 142, 255, 0.585);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.buttonGame:hover::before {
+  scale: 5.2;
+}
+
+.buttonGame:hover {
+  color: #ffffff;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 142, 255, 0.466);
+}
+
+.buttonGame:active {
+  scale: 1;
+}
+
+/* ------------------------------------- */
+p {
+    font-size: 1em;
+    color: #ffffff;
+    font-family: American;
+}
+
+
+</style>
+
+
+<div id="loading-screen">
+  <div class="terminal-loader">
+    <div class="terminal-header">
+      <div class="terminal-title">Status</div>
+      <div class="terminal-controls">
+        <div class="control close"></div>
+        <div class="control minimize"></div>
+        <div class="control maximize"></div>
+      </div>
+    </div>
+    <div class="text">Loading...</div>
+  </div>
+</div>
+
+
+
+
+<div class="navbar">
+            <nav>
+                <div class="navContainer">
+                <section>
+                  <a class="Item" href="#">HOME</a>
+                  <a class="Item" href="#">CHEATS</a>
+                  <a class="Item" href="#">SHOWCASES</a>
+                  <a class="Item" href="#">DISCORD</a>
+                </section>
+                </div>
+                <nav>
+    </div>
+
+    <div>
+        <div>
+            <h1><a class="your">YOUR</a> CHEAT HAVEN</h1>
+        </div>
+
+        <div class="cheats">
+            <img class="cheat" src="/images/Our.png" alt="">
+            <img class="cheat" src="/images/Their.png" alt="">
+        </div>
+    </div>
+
+    <div>
+        <h2>WHY <a class="your">US?</a></h2>
+    </div>
+    <div class="Box">
+        <div class="notification">
+            <img src="/images/Trust.png" alt="Trust">
+            <div class="notiglow"></div>
+            <div class="notiborderglow"></div>
+            <div class="notibody"><h2>TRUSTWORTHY</h2>
+                <p>Honesty shapes trust, ensuring a scam-free haven for digital enthusiasts!</p>
+            </div>
+        </div>
+
+        <div class="notification">
+            <img src="/images/Maintenance.png" alt="Maintenance">
+            <div class="notiglow"></div>
+            <div class="notiborderglow"></div>
+            <div class="notibody"><h2>CHEAP PRICES</h2>
+                <p>Stay ahead with the latest updates, cheats, and innovations!</p>
+            </div>
+        </div>
+
+        <div class="notification">
+            <img src="/images/Support.png" alt="Support">
+            <div class="notiglow"></div>
+            <div class="notiborderglow"></div>
+            <div class="notibody"><h2>BEST SUPPORT</h2>
+                <p>Exceptional 24/7 service, personalized care for your satisfaction!</p>
+            </div>
+        </div>
+    </div>
+<!---
+    <div>
+      <h2><a class="your">&lt;</a> OUR REVIEWS <a class="your">&gt;</a></h2>
+  </div> -->
+
+    </body>
+    <script src="scroll-up.js"></script>
+    <script src="Loading.js"></script>
+</html>
