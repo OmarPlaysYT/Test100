@@ -1,11 +1,25 @@
-// Function to check if images are already cached
-function areImagesCached() {
-    return localStorage.getItem('imagesLoaded') === 'true';
+// Utility function to get a cookie by name
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
 }
 
-// Function to mark images as loaded in localStorage
+// Utility function to set a cookie
+function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+}
+
+// Function to check if images are already cached (via cookies)
+function areImagesCached() {
+    return getCookie('imagesLoaded') === 'true';
+}
+
+// Function to mark images as loaded in cookies
 function setImagesAsLoaded() {
-    localStorage.setItem('imagesLoaded', 'true');
+    setCookie('imagesLoaded', 'true', 7); // Set the cookie to expire in 7 days (adjust as needed)
 }
 
 // Main function to handle image loading and loading screen
@@ -15,7 +29,7 @@ function handleLoadingScreen() {
     const images = document.querySelectorAll('img');
     let imagesLoaded = 0;
 
-    // If images are cached, skip the loading screen logic
+    // If images are cached (cookie is set), skip the loading screen logic
     if (areImagesCached()) {
         mainContent.style.display = 'block';  // Show the main content immediately
         loadingScreen.classList.add('hide-loading'); // Let CSS animation handle the transition
@@ -27,8 +41,7 @@ function handleLoadingScreen() {
         setTimeout(function() {
             mainContent.style.display = 'block';  // Show the main content
             loadingScreen.classList.add('hide-loading'); // Trigger CSS animation to move the loading screen away
-            // No forced hiding of loading screen, let the CSS `hide-loading` class animate it away
-        }, 3800); // Display loading screen for 3.3 seconds
+        }, 3300); // Display loading screen for 3.3 seconds
     }
 
     // Check if all images are loaded
@@ -39,7 +52,7 @@ function handleLoadingScreen() {
             image.addEventListener('load', () => {
                 imagesLoaded++;
                 if (imagesLoaded === images.length) {
-                    setImagesAsLoaded();  // Mark images as loaded
+                    setImagesAsLoaded();  // Mark images as loaded in cookies
                     showContentAfterDelay();  // Show content after the delay
                 }
             });
