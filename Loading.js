@@ -73,7 +73,6 @@ window.addEventListener("load", function() {
       // If all images were already loaded
       if (imagesLoaded === images.length) {
           setImagesAsLoaded();
-          removeLoadingBanner();
       }
   }
 
