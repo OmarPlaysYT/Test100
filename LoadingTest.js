@@ -52,7 +52,6 @@
         // If all images were already loaded at page load
         if (imagesLoaded === images.length) {
             setImagesAsLoaded();
-            delayedRemoveBanner(); // Always delay for 5 seconds
         }
     }
 
